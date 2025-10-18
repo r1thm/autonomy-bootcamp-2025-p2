@@ -90,8 +90,8 @@ def main() -> int:
     # Create worker properties for each worker type (what inputs it takes, how many workers)
     # Heartbeat sender
     result, heartbeat_sender_properties = worker_manager.WorkerProperties.create(
-        count = HEARTBEAT_SENDER_COUNT
-        work_arguments = (connection, 1, ), 
+        count = HEARTBEAT_SENDER_COUNT,
+        work_arguments = (connection, 1, {}), 
     #Heartbeats are emitted each second
         input_queues = [],
         output_queues = [],

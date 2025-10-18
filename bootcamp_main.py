@@ -141,7 +141,7 @@ def main() -> int:
     assert telemetry_properties is not None
 
     # Command
-    target_coordinates=command.Position(0, 0, 0)
+    target_coordinates = command.Position(0, 0, 0)
     result, command_properties = worker_manager.WorkerProperties.create(
         count=COMMAND_COUNT,
         target=command_worker.command_worker,

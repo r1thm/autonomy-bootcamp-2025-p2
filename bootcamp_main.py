@@ -91,6 +91,7 @@ def main() -> int:
     # Heartbeat sender
     result, heartbeat_sender_properties = worker_manager.WorkerProperties.create(
         count=HEARTBEAT_SENDER_COUNT,
+        target=heartbeat_sender_worker.heartbeat_sender_worker,
         work_arguments=(connection, 1, {}),
         # Heartbeats are emitted each second
         input_queues=[],
@@ -108,6 +109,7 @@ def main() -> int:
     # Heartbeat receiver
     result, heartbeat_receiver_properties = worker_manager.WorkerProperties.create(
         count=HEARTBEAT_RECEIVER_COUNT,
+        target=heartbeat_receiver_worker.heartbeat_receiver_worker,
         work_arguments=(connection, 1, {}),
         input_queues=[],
         output_queues=[],
@@ -124,6 +126,7 @@ def main() -> int:
     # Telemetry
     result, telemetry_properties = worker_manager.WorkerProperties.create(
         count=TELEMETRY_COUNT,
+        target=telemetry_worker.telemetry_worker,
         work_arguments=(connection, {}),
         input_queues=[],
         output_queues=[],
@@ -138,9 +141,11 @@ def main() -> int:
     assert telemetry_properties is not None
 
     # Command
+    target_coordinates=command.Position(0, 0, 0)
     result, command_properties = worker_manager.WorkerProperties.create(
         count=COMMAND_COUNT,
-        work_arguments=(connection, target, amount_to_move, angle_difference, {}),
+        target=command_worker.command_worker,
+        work_arguments=(connection, target_coordinates, {}),
         input_queues=[],
         output_queues=[],
         controller=controller,
@@ -165,7 +170,7 @@ def main() -> int:
     start_time = time.time()
     # Continue running for 100 seconds or until the drone disconnects
     while time.time() - start_time < 100:
-        if not heartbeat_queue.queue.empty():
+        if not queue.empty():
             reading = heartbeat_queue.queue.get()
             main_logger.info(f"Active reading from queue: {reading}")
         else:

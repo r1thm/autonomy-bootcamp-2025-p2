@@ -71,6 +71,7 @@ def read_queue(
     while not controller.is_exit_requested():
         if not active_queue.queue.empty():
             state = active_queue.queue.get()
+            main_logger.info(f"Output: {state}")
         time.sleep(
             1
         )  # Add logic to read from your worker's output queue and print it using the logger

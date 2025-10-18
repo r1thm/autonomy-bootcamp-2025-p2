@@ -45,8 +45,7 @@ def start_drone() -> None:
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
-def stop(
-) -> None:
+def stop() -> None:
     """
     Stop the workers.
     """
@@ -99,7 +98,8 @@ def main() -> int:
 
     heartbeat_sender_worker.heartbeat_sender_worker(
         # Place your own arguments here
-        connection, controller,
+        connection,
+        controller,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

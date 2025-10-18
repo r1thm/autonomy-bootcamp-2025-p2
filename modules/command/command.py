@@ -42,7 +42,9 @@ class Command:  # pylint: disable=too-many-instance-attributes
         """
         Falliable create (instantiation) method to create a Command object.
         """
-        return Command(cls.__private_key, connection, target, local_logger)  #  Create a Command object
+        return Command(
+            cls.__private_key, connection, target, local_logger
+        )  #  Create a Command object
 
     def __init__(
         self,
@@ -57,7 +59,7 @@ class Command:  # pylint: disable=too-many-instance-attributes
         self.connection = connection
         self.target = target
         self.local_logger = local_logger
-        self.xv  = 0
+        self.xv = 0
         self.yv = 0
         self.zv = 0
         self.n_val = 0
@@ -77,7 +79,8 @@ class Command:  # pylint: disable=too-many-instance-attributes
         average_velocity = (
             self.xv / self.n_val,
             self.yv / self.n_val,
-            self.zv / self.n_val, )
+            self.zv / self.n_val,
+        )
         # Log average velocity for this trip so far
         self.local_logger.info(f"Average Velocity: {average_velocity}")
 
@@ -97,42 +100,42 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 1,
                 0,
                 mavutil.mavlink.MAV_CMD_CONDITION_CHANGE_ALT,
-                confirmation = 0,
-                param1 = 1,
-                param2 = 0,
-                param3 = 0,
-                param4 = 0,
-                param5 = 0,
-                param6 = 0,
-                param7 = target.z,
+                confirmation=0,
+                param1=1,
+                param2=0,
+                param3=0,
+                param4=0,
+                param5=0,
+                param6=0,
+                param7=target.z,
             )
             return f"CHANGE_ALTITUDE: {amount_to_move}"
 
-        target_angle = math.atan2(target.y - path.y, target.x - path.x) 
-        #Angle (radians) measured counter-clockwise of x
-        angle_difference = target_angle - path.yaw 
-        #Distance needed for drone to face target
+        target_angle = math.atan2(target.y - path.y, target.x - path.x)
+        # Angle (radians) measured counter-clockwise of x
+        angle_difference = target_angle - path.yaw
+        # Distance needed for drone to face target
         if angle_difference > (math.pi):
             angle_difference = -1 * ((2 * math.pi) - angle_difference)
         elif angle_difference < -1 * (math.pi):
             angle_difference = -1 * ((-2 * math.pi) - angle_difference)
-        #Determines the shortest value of angle_difference (<+180 or -180) instead of using values 180 to 360
+        # Determines the shortest value of angle_difference (<+180 or -180) instead of using values 180 to 360
         angle_difference_deg = math.degrees(angle_difference)
         if angle_difference_deg > 5 or angle_difference_deg < -5:
-        #Drone must be corrected if >5deg from target
+            # Drone must be corrected if >5deg from target
             direction = -1 if angle_difference_deg > 0 else 1
             self.connection.mav.command_long_send(
                 1,
                 0,
                 mavutil.mavlink.MAV_CMD_CONDITION_YAW,
-                confirmation = 0,
-                param1 = angle_difference_deg,
-                param2 = 5,
-                param3 = direction,
-                param4 = 1,
-                param5 = 0,
-                param6 = 0,
-                param7 = 0,
+                confirmation=0,
+                param1=angle_difference_deg,
+                param2=5,
+                param3=direction,
+                param4=1,
+                param5=0,
+                param6=0,
+                param7=0,
             )
             return f"CHANGING_YAW: {angle_difference_deg}"
         return None

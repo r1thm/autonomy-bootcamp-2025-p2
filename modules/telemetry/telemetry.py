@@ -81,7 +81,7 @@ class Telemetry:
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        return  Telemetry(cls.__private_key, connection,  local_logger)  # Create a Telemetry object
+        return Telemetry(cls.__private_key, connection, local_logger)  # Create a Telemetry object
 
     def __init__(
         self,

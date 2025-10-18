@@ -54,7 +54,9 @@ def telemetry_worker(
     telemetry_instance = telemetry.Telemetry.create(connection, local_logger)
 
     # Main loop: do work.
-    while not controller.is_exit_requested(): #i love documentation file for letting me spam this ult
+    while (
+        not controller.is_exit_requested()
+    ):  # i love documentation file for letting me spam this ult
         controller.check_pause()
         value = telemetry_instance.run()
         if value:

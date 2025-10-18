@@ -31,7 +31,7 @@ ERROR_TOLERANCE = 1e-2
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 # Add your own constants here
-RECEIVER_QUEUE_MAX_SIZE = 5 #Ensures we that each fail is counted as consecutive
+RECEIVER_QUEUE_MAX_SIZE = 5  # Ensures we that each fail is counted as consecutive
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
 # =================================================================================================
@@ -71,7 +71,9 @@ def read_queue(
     while not controller.is_exit_requested():
         if not active_queue.queue.empty():
             state = active_queue.queue.get()
-        time.sleep(1)  # Add logic to read from your worker's output queue and print it using the logger
+        time.sleep(
+            1
+        )  # Add logic to read from your worker's output queue and print it using the logger
 
 
 # =================================================================================================
@@ -140,7 +142,9 @@ def main() -> int:
 
     heartbeat_receiver_worker.heartbeat_receiver_worker(
         # Place your own arguments here
-        connection, report_queue, controller
+        connection,
+        report_queue,
+        controller,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

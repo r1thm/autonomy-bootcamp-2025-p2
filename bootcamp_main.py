@@ -30,7 +30,7 @@ CONNECTION_STRING = "tcp:localhost:12345"
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 # Set queue max sizes (<= 0 for infinity)
-MAX_QUEUE =  5
+MAX_QUEUE = 5
 
 # Set worker counts
 HEARTBEAT_SENDER_COUNT = 1
@@ -90,67 +90,67 @@ def main() -> int:
     # Create worker properties for each worker type (what inputs it takes, how many workers)
     # Heartbeat sender
     result, heartbeat_sender_properties = worker_manager.WorkerProperties.create(
-        count = HEARTBEAT_SENDER_COUNT,
-        work_arguments = (connection, 1, {}), 
-    #Heartbeats are emitted each second
-        input_queues = [],
-        output_queues = [],
-        controller = controller,
-        local_logger = main_logger,
+        count=HEARTBEAT_SENDER_COUNT,
+        work_arguments=(connection, 1, {}),
+        # Heartbeats are emitted each second
+        input_queues=[],
+        output_queues=[],
+        controller=controller,
+        local_logger=main_logger,
     )
     if not result:
         main_logger.critical("Unable to send heartbeat sender properties")
         return -1
-    
-    #Get pylance to stop complaining
+
+    # Get pylance to stop complaining
     assert heartbeat_sender_properties is not None
 
     # Heartbeat receiver
     result, heartbeat_receiver_properties = worker_manager.WorkerProperties.create(
-        count = HEARTBEAT_RECEIVER_COUNT
-        work_arguments = (connection, 1, {}),
-        input_queues = [],
-        output_queues = [],
-        controller = controller,
-        local_logger = main_logger,
+        count=HEARTBEAT_RECEIVER_COUNT,
+        work_arguments=(connection, 1, {}),
+        input_queues=[],
+        output_queues=[],
+        controller=controller,
+        local_logger=main_logger,
     )
     if not result:
         main_logger.critical("Unable to send heartbeat receiver properties")
         return -1
-    
-    #Get pylance to stop complaining
+
+    # Get pylance to stop complaining
     assert heartbeat_receiver_properties is not None
 
     # Telemetry
     result, telemetry_properties = worker_manager.WorkerProperties.create(
-        count = TELEMETRY_COUNT
-        work_arguments = (connection, {}),
-        input_queues = [],
-        output_queues = [],
-        controller = controller,
-        local_logger = main_logger,
+        count=TELEMETRY_COUNT,
+        work_arguments=(connection, {}),
+        input_queues=[],
+        output_queues=[],
+        controller=controller,
+        local_logger=main_logger,
     )
     if not result:
         main_logger.critical("Unable to send telemetry properties")
         return -1
-    
-    #Get pylance to stop complaining
+
+    # Get pylance to stop complaining
     assert telemetry_properties is not None
 
     # Command
     result, command_properties = worker_manager.WorkerProperties.create(
-        count = COMMAND_COUNT
-        work_arguments = (connection, target, amount_to_move, angle_difference, {}),
-        input_queues = [],
-        output_queues = [],
-        controller = controller,
-        local_logger = main_logger,
+        count=COMMAND_COUNT,
+        work_arguments=(connection, target, amount_to_move, angle_difference, {}),
+        input_queues=[],
+        output_queues=[],
+        controller=controller,
+        local_logger=main_logger,
     )
     if not result:
         main_logger.critical("Unable to send command properties")
         return -1
-    
-    #Get pylance to stop complaining
+
+    # Get pylance to stop complaining
     assert command_properties is not None
 
     # Create the workers (processes) and obtain their managers

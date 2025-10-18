@@ -42,8 +42,7 @@ class HeartbeatSender:
         Attempt to send a heartbeat message.
         """
         self.connection.mav.heartbeat_send(
-            mavutil.mavlink.MAV_TYPE_GCS, mavutil.mavlink.MAV_AUTOPILOT_INVALID,
-            0, 0, 0
+            mavutil.mavlink.MAV_TYPE_GCS, mavutil.mavlink.MAV_AUTOPILOT_INVALID, 0, 0, 0
         )  # Send a heartbeat message
 
 

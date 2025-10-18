@@ -76,7 +76,9 @@ def read_queue(
     """
     while not controller.is_exit_requested():
         if not command_output_queue.queue.empty():
-            main_logger.info(command_output_queue.queue.get())  # Add logic to read from your worker's output queue and print it using the logger
+            main_logger.info(
+                command_output_queue.queue.get()
+            )  # Add logic to read from your worker's output queue and print it using the logger
 
 
 def put_queue(
@@ -88,7 +90,9 @@ def put_queue(
     """
     for data in telemetry_data_list:
         command_input_queue.queue.put(data)
-        time.sleep(TELEMETRY_PERIOD)  # Add logic to place the mocked inputs into your worker's input queue periodically
+        time.sleep(
+            TELEMETRY_PERIOD
+        )  # Add logic to place the mocked inputs into your worker's input queue periodically
 
 
 # =================================================================================================
@@ -231,17 +235,37 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (controller, command_input_queue, command_output_queue, ), ).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * len(path),
+        stop,
+        (
+            controller,
+            command_input_queue,
+            command_output_queue,
+        ),
+    ).start()
 
     # Put items into input queue
-    threading.Thread(target=put_queue, args=(command_input_queue, path, ), ).start()
+    threading.Thread(
+        target=put_queue,
+        args=(
+            command_input_queue,
+            path,
+        ),
+    ).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(command_output_queue, controller, main_logger)).start()
+    threading.Thread(
+        target=read_queue, args=(command_output_queue, controller, main_logger)
+    ).start()
 
     command_worker.command_worker(
         # Place your own arguments here
-        connection, TARGET, controller, command_input_queue, command_output_queue,
+        connection,
+        TARGET,
+        controller,
+        command_input_queue,
+        command_output_queue,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

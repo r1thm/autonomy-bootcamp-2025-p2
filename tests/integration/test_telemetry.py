@@ -69,7 +69,9 @@ def read_queue(
     """
     while not controller.is_exit_requested():
         if not telemetry_queue.queue.empty():
-            main_logger.info(telemetry_queue.queue.get())  # Add logic to read from your worker's output queue and print it using the logger
+            main_logger.info(
+                telemetry_queue.queue.get()
+            )  # Add logic to read from your worker's output queue and print it using the logger
 
 
 # =================================================================================================
@@ -130,13 +132,14 @@ def main() -> int:
     threading.Timer(
         TELEMETRY_PERIOD * NUM_TRIALS * 2 + NUM_FAILS,
         stop,
-        (controller, telemetry_queue, main_logger),).start()
+        (controller, telemetry_queue, main_logger),
+    ).start()
 
     # Read the main queue (worker outputs)
     threading.Thread(target=read_queue, args=(telemetry_queue, controller, main_logger)).start()
 
     telemetry_worker.telemetry_worker(connection, controller, telemetry_queue)
-        # Put your own arguments here
+    # Put your own arguments here
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
     # =============================================================================================

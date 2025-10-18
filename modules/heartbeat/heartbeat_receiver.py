@@ -40,23 +40,26 @@ class HeartbeatReceiver:
         self.connection = connection
         self.local_logger = local_logger
         self.missed_heartbeats = 0
-        self.internal_clock = 0 #Internal clock can "force" connection to disconnection permanently
+        self.internal_clock = (
+            0  # Internal clock can "force" connection to disconnection permanently
+        )
 
     def run(
-        self,) -> str:
+        self,
+    ) -> str:
         """
         Attempt to recieve a heartbeat message.
         If disconnected for over a threshold number of periods,
         the connection is considered disconnected.
         """
         signal = self.connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1.2)
-        
+
         if signal and signal.get_type() == "HEARTBEAT" and self.internal_clock < 6:
-            self.missed_heartbeats = 0 #Failsafe to ensure consecutiveness
+            self.missed_heartbeats = 0  # Failsafe to ensure consecutiveness
             self.internal_clock = 0
             self.local_logger.info("CONNECTED. Heartbeat Received.", True)
         else:
-            self.missed_heartbeats += 1 #If variable hits 5, receiver is no longer connected
+            self.missed_heartbeats += 1  # If variable hits 5, receiver is no longer connected
             self.internal_clock += 1
             self.local_logger.warning("Missed Heartbeat!", True)
             if self.internal_clock >= 6:
@@ -64,8 +67,9 @@ class HeartbeatReceiver:
             if self.missed_heartbeats >= 5:
                 self.local_logger.error("Connection lost due to 5 or more missed heartbeats!", True)
             else:
-                self.local_logger.info("CONNECTED.", True) #Scenario: Heartbeat missed but not 5 in row
-
+                self.local_logger.info(
+                    "CONNECTED.", True
+                )  # Scenario: Heartbeat missed but not 5 in row
 
 
 # =================================================================================================

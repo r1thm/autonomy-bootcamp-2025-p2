@@ -159,10 +159,55 @@ def main() -> int:
     assert command_properties is not None
 
     # Create the workers (processes) and obtain their managers
-    for manager in worker_manager:
-        manager.start_workers()
+    worker_managers: list[worker_manager.WorkerManager] = []
+
+    result, heartbeat_sender_manager = worker_manager.WorkerManager.create(
+        worker_properties=heartbeat_sender_properties,
+        local_logger=main_logger,
+    )
+    if not result:
+        main_logger.critical("Creation of Heartbeat Sender Manager Failed")
+        return -1
+    # GET PYLANCE TO STOP COMPLAINING
+    assert heartbeat_sender_manager is not None
+    worker_managers.append(heartbeat_sender_manager)
+
+    result, heartbeat_receiver_manager = worker_manager.WorkerManager.create(
+        worker_properties=heartbeat_receiver_properties,
+        local_logger=main_logger,
+    )
+    if not result:
+        main_logger.critical("Creation of Heartbeat Receiver Manager Failed")
+        return -1
+    # GET PYLANCE TO STOP COMPLAINING
+    assert heartbeat_receiver_manager is not None
+    worker_managers.append(heartbeat_receiver_manager)
+
+    result, telemetry_manager = worker_manager.WorkerManager.create(
+        worker_properties=telemetry_properties,
+        local_logger=main_logger,
+    )
+    if not result:
+        main_logger.critical("Creation of Telemetry Manager Failed")
+        return -1
+    # GET PYLANCE TO STOP COMPLAINING
+    assert telemetry_manager is not None
+    worker_managers.append(telemetry_manager)
+
+    result, command_manager = worker_manager.WorkerManager.create(
+        worker_properties=command_properties,
+        local_logger=main_logger,
+    )
+    if not result:
+        main_logger.critical("Creation of Command Manager Failed")
+        return -1
+    # GET PYLANCE TO STOP COMPLAINING
+    assert command_manager is not None
+    worker_managers.append(command_manager)
 
     # Start worker processes
+    for manager in worker_managers:
+        manager.start_workers()
 
     main_logger.info("Started")
 

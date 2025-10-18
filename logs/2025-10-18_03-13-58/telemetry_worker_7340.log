@@ -1,0 +1,57 @@
+03:13:58: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry_worker.py | telemetry_worker | 48] Logger initialized
+03:13:58: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:13:58: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:13:58: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:13:59: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:13:59: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:13:59: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:13:59: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:13:59: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:00: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:00: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:00: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:00: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:00: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:01: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:01: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:01: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:01: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:01: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:02: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:02: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:02: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:02: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:02: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:03: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:03: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:04: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 136] Telemetry data could not be received from drone.
+03:14:04: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:05: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 136] Telemetry data could not be received from drone.
+03:14:05: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:06: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 136] Telemetry data could not be received from drone.
+03:14:06: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:06: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:06: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:07: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:07: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:07: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:07: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:07: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:08: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:08: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:08: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:08: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:08: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:09: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:09: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:09: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:09: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:09: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:10: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:10: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:10: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:10: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:10: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:11: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: ATTITUDE
+03:14:11: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 111] Received Telemetry Data: LOCAL_POSITION_NED
+03:14:12: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\telemetry\telemetry.py | run | 136] Telemetry data could not be received from drone.

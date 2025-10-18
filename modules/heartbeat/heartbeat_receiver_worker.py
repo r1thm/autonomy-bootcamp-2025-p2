@@ -25,7 +25,9 @@ def heartbeat_receiver_worker(
     """
     Worker process.
 
-    args... describe what the arguments are
+    connection is a channel between drone and heartbeat receiver worker
+    report_queue stores data in queue
+    controller regulates a worker's state
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

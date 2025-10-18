@@ -54,6 +54,8 @@ def heartbeat_receiver_worker(
 
     local_logger.info("Heartbeat Receiver Created", True)
 
+    assert receiver is not None
+
     # Main loop: do work.
     while not controller.is_exit_requested():
         controller.check_pause()

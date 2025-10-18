@@ -59,6 +59,7 @@ def heartbeat_receiver_worker(
         controller.check_pause()
         status = receiver.run()
         report_queue.queue.put(status)
+        local_logger.info(f"Status: {status}", True)
 
 
 # =================================================================================================

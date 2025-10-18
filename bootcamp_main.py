@@ -233,7 +233,8 @@ def main() -> int:
     main_logger.info("Queues cleared")
 
     # Clean up worker processes
-    manager.join_workers()
+    for manager in worker_managers:
+        manager.join_workers()
 
     main_logger.info("Stopped")
 

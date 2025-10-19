@@ -70,10 +70,11 @@ def read_queue(
     """
     while not controller.is_exit_requested():
         if not active_queue.queue.empty():
+            state = active_queue.queue.get()
             if active_queue.queue.get() == "DISCONNECTED":
-                main_logger.warning(f"State: {active_queue.queue.get()}")
+                main_logger.info(f"State: {state}")
             else:
-                main_logger.info(f"State: {active_queue.queue.get()}")
+                main_logger.info(f"State: {state}")
         time.sleep(
             1
         )  # Add logic to read from your worker's output queue and print it using the logger

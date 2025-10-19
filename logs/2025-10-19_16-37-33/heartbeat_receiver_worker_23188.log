@@ -1,0 +1,75 @@
+16:37:34: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 47] Logger initialized
+16:37:34: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 58] Heartbeat Receiver Created
+16:37:34: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:35: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:35: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:35: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:35: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:35: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:36: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:36: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:36: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:37: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:37: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:37: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:38: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:38: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:38: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:39: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:39: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:39: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:39: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:40: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:40: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:41: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:41: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:41: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:41: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:42: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:42: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:42: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:42: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:43: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:43: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:43: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:43: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:44: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:44: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:44: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:44: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:45: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:45: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:45: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:45: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:46: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:46: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:46: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:46: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:47: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:47: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 69] DISCONNECTED due to 5 or more missed heartbeats!
+16:37:47: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:47: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:47: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:48: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:48: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:48: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:49: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:49: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:49: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:50: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:50: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:50: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:51: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:51: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:51: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:52: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:52: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:52: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:52: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:53: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 62] CONNECTED. Heartbeat Received.
+16:37:53: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:53: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:54: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:54: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.
+16:37:54: [WARNING] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Missed Heartbeat!
+16:37:54: [ERROR] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] CONNECTED. Heartbeat missed.

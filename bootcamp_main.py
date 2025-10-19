@@ -39,7 +39,7 @@ TELEMETRY_COUNT = 1
 COMMAND_COUNT = 1
 
 # Any other constants
-heartbeat_interval = 1  # Seconds between heartbeat
+HEARTBEAT_INTERVAL = 1  # Seconds between heartbeat
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -95,7 +95,7 @@ def main() -> int:
     result, heartbeat_sender_properties = worker_manager.WorkerProperties.create(
         count=HEARTBEAT_SENDER_COUNT,
         target=heartbeat_sender_worker.heartbeat_sender_worker,
-        work_arguments=(connection, heartbeat_interval, {}),
+        work_arguments=(connection, HEARTBEAT_INTERVAL, {}),
         # Heartbeats are emitted each second
         input_queues=[],
         output_queues=[],
@@ -113,7 +113,7 @@ def main() -> int:
     result, heartbeat_receiver_properties = worker_manager.WorkerProperties.create(
         count=HEARTBEAT_RECEIVER_COUNT,
         target=heartbeat_receiver_worker.heartbeat_receiver_worker,
-        work_arguments=(connection, heartbeat_interval, {}),
+        work_arguments=(connection, HEARTBEAT_INTERVAL, {}),
         input_queues=[],
         output_queues=[],
         controller=controller,

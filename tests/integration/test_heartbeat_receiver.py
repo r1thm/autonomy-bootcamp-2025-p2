@@ -73,8 +73,9 @@ def read_queue(
             if active_queue.queue.get() == "DISCONNECTED":
                 main_logger.warning("State: Disconnected")
             else:
-                main_logger.info(
-                    "State: Connected"
+                main_logger.info("State: Connected")
+                time.sleep(
+                    0.1
                 )  # Add logic to read from your worker's output queue and print it using the logger
 
 

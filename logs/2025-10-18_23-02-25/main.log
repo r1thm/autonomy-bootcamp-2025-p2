@@ -1,6 +1,6 @@
-06:21:50: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
-06:21:50: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | main | 113] Connected!
-06:21:50: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:25: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\common\modules\logger\logger_main_setup.py | setup_main_logger | 62] main logger initialized
+23:02:26: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | main | 115] Connected!
+23:02:26: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
@@ -15,7 +15,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:51: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:26: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 500,
             x: 0.5,
             y: 0.0,
@@ -30,7 +30,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:51: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:27: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 1000,
             x: 1.0,
             y: 0.0,
@@ -45,7 +45,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:52: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:27: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 1500,
             x: 1.5,
             y: 0.0,
@@ -60,7 +60,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:52: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:28: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 2000,
             x: 2.0,
             y: 0.0,
@@ -75,7 +75,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:53: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:28: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 2500,
             x: 2.5,
             y: 0.0,
@@ -90,7 +90,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:53: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:29: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 3000,
             x: 3.0,
             y: 0.0,
@@ -105,7 +105,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:54: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:29: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 3500,
             x: 3.5,
             y: 0.0,
@@ -120,7 +120,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:54: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:30: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 4000,
             x: 4.0,
             y: 0.0,
@@ -135,7 +135,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:55: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:30: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 4500,
             x: 4.5,
             y: 0.0,
@@ -150,7 +150,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:58: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:34: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 0,
             x: 0.0,
             y: 0.0,
@@ -165,7 +165,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:59: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:34: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 500,
             x: 0.3333333432674408,
             y: 0.0,
@@ -180,7 +180,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:21:59: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:35: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 1000,
             x: 0.6666666865348816,
             y: 0.0,
@@ -195,7 +195,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:22:00: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:35: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 1500,
             x: 1.3333333730697632,
             y: 0.0,
@@ -210,7 +210,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:22:00: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:36: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 2000,
             x: 1.6666666269302368,
             y: 0.0,
@@ -225,7 +225,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:22:01: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:36: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 2500,
             x: 2.3333332538604736,
             y: 0.0,
@@ -240,7 +240,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:22:01: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:37: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 3000,
             x: 2.6666667461395264,
             y: 0.0,
@@ -255,8 +255,8 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:22:02: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
-            time_since_boot: 3500,
+23:02:37: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+            time_since_boot: 3501,
             x: 3.3333332538604736,
             y: 0.0,
             z: 0.0,
@@ -270,7 +270,7 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:22:02: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+23:02:38: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
             time_since_boot: 4000,
             x: 3.6666667461395264,
             y: 0.0,
@@ -285,8 +285,8 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:22:03: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
-            time_since_boot: 4500,
+23:02:38: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | read_queue | 72] {
+            time_since_boot: 4501,
             x: 4.333333492279053,
             y: 0.0,
             z: 0.0,
@@ -300,4 +300,4 @@
             pitch_speed: 0.0,
             yaw_speed: 3.1415927410125732
         }
-06:22:04: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | stop | 59] Telemetry worker has stopped
+23:02:39: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\tests\integration\test_telemetry.py | stop | 59] Telemetry worker has stopped

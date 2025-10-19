@@ -38,13 +38,16 @@ class Command:  # pylint: disable=too-many-instance-attributes
         connection: mavutil.mavfile,
         target: Position,  # Put your own arguments here
         local_logger: logger.Logger,
-    ) -> object:
+    ) -> "tuple[True, Command] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a Command object.
         """
-        return Command(
-            cls.__private_key, connection, target, local_logger
-        )  #  Create a Command object
+        try:
+            command = cls(cls.__private_key, connection, target, local_logger)
+            return True, command
+        except (OSError, mavutil.mavlink.MAVError) as exception:
+            local_logger.error(f"Command object creation failed: {exception}")
+            return False, None  #  Create a Command object
 
     def __init__(
         self,

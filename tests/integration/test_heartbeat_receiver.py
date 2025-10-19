@@ -51,13 +51,13 @@ def start_drone() -> None:
 # =================================================================================================
 def stop(
     controller: worker_controller.WorkerController,
-    info_queue: queue_proxy_wrapper.QueueProxyWrapper,  # Add any necessary arguments
+    active_queue: queue_proxy_wrapper.QueueProxyWrapper,  # Add any necessary arguments
 ) -> None:
     """
     Stop the workers.
     """
     controller.request_exit()
-    info_queue.fill_and_drain_queue()  # Add logic to stop your worker
+    active_queue.fill_and_drain_queue()  # Add logic to stop your worker
 
 
 def read_queue(
@@ -70,11 +70,12 @@ def read_queue(
     """
     while not controller.is_exit_requested():
         if not active_queue.queue.empty():
-            state = active_queue.queue.get()
-            main_logger.info(f"Output: {state}")
-        time.sleep(
-            1
-        )  # Add logic to read from your worker's output queue and print it using the logger
+            if active_queue.queue.get() == "DISCONNECTED":
+                main_logger.warning("State: Disconnected")
+            else:
+                main_logger.info(
+                    "State: Connected"
+                )  # Add logic to read from your worker's output queue and print it using the logger
 
 
 # =================================================================================================
@@ -127,7 +128,7 @@ def main() -> int:
 
     # Create a multiprocess manager for synchronized queues
     mp_manager = mp.Manager()
-    report_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, RECEIVER_QUEUE_MAX_SIZE)
+    active_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, RECEIVER_QUEUE_MAX_SIZE)
 
     # Create your queues
 
@@ -135,16 +136,16 @@ def main() -> int:
     threading.Timer(
         HEARTBEAT_PERIOD * (NUM_TRIALS * 2 + DISCONNECT_THRESHOLD + NUM_DISCONNECTS + 2),
         stop,
-        (controller, report_queue),
+        (controller, active_queue),
     ).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(report_queue, controller, main_logger)).start()
+    threading.Thread(target=read_queue, args=(active_queue, controller, main_logger)).start()
 
     heartbeat_receiver_worker.heartbeat_receiver_worker(
         # Place your own arguments here
         connection,
-        report_queue,
+        active_queue,
         controller,
     )
     # =============================================================================================

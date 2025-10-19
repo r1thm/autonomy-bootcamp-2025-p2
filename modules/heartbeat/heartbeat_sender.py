@@ -23,7 +23,14 @@ class HeartbeatSender:
         """
         Falliable create (instantiation) method to create a HeartbeatSender object.
         """
-        return HeartbeatSender(cls.__private_key, connection)  # Create a HeartbeatSender object
+        try:
+            heartbeat_sender = cls(cls.__private_key, connection)
+            return True, heartbeat_sender
+        except (OSError, mavutil.mavlink.MAVError) as exception:
+            print(
+                f"Heartbeat receiver object creation failed: {exception}"
+            )  # Using print since logger was not imported
+            return False, None  # Create a Heartbeat Sender object
 
     def __init__(
         self,
@@ -37,7 +44,7 @@ class HeartbeatSender:
 
     def run(
         self,  # Put your own arguments here
-    ) -> bool:
+    ) -> None:
         """
         Attempt to send a heartbeat message.
         """

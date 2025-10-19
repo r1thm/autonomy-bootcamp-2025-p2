@@ -51,7 +51,10 @@ def telemetry_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (telemetry.Telemetry)
-    telemetry_instance = telemetry.Telemetry.create(connection, local_logger)
+    result, telemetry_instance = telemetry.Telemetry.create(connection, local_logger)
+    if not result:
+        local_logger.error("Failed to create telemetry object")
+        return
 
     # Main loop: do work.
     while (

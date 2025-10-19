@@ -49,12 +49,16 @@ def heartbeat_sender_worker(
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
     # Instantiate class object (heartbeat_sender.HeartbeatSender)
-    heartbt_instance = heartbeat_sender.HeartbeatSender.create(connection)
+    result, heartbeat_instance = heartbeat_sender.HeartbeatSender.create(connection)
+    if not result:
+        local_logger.error("Failed to create Heartbeat Sender object!")
+        return
 
     # Main loop: do work.
     while not controller.is_exit_requested():
         controller.check_pause()
-        heartbt_instance.run()
+        heartbeat_instance.run()
+        local_logger.info("Heartbeat Sent!")
         time.sleep(1)
 
 

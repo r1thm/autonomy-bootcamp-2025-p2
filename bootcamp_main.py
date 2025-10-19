@@ -39,6 +39,7 @@ TELEMETRY_COUNT = 1
 COMMAND_COUNT = 1
 
 # Any other constants
+heartbeat_interval = 1  # Seconds between heartbeat
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -86,13 +87,15 @@ def main() -> int:
 
     # Create queues
     heartbeat_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, MAX_QUEUE)
+    telemetry_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, MAX_QUEUE)
+    command_output_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, MAX_QUEUE)
 
     # Create worker properties for each worker type (what inputs it takes, how many workers)
     # Heartbeat sender
     result, heartbeat_sender_properties = worker_manager.WorkerProperties.create(
         count=HEARTBEAT_SENDER_COUNT,
         target=heartbeat_sender_worker.heartbeat_sender_worker,
-        work_arguments=(connection, 1, {}),
+        work_arguments=(connection, heartbeat_interval, {}),
         # Heartbeats are emitted each second
         input_queues=[],
         output_queues=[],
@@ -110,7 +113,7 @@ def main() -> int:
     result, heartbeat_receiver_properties = worker_manager.WorkerProperties.create(
         count=HEARTBEAT_RECEIVER_COUNT,
         target=heartbeat_receiver_worker.heartbeat_receiver_worker,
-        work_arguments=(connection, 1, {}),
+        work_arguments=(connection, heartbeat_interval, {}),
         input_queues=[],
         output_queues=[],
         controller=controller,
@@ -129,7 +132,7 @@ def main() -> int:
         target=telemetry_worker.telemetry_worker,
         work_arguments=(connection, {}),
         input_queues=[],
-        output_queues=[],
+        output_queues=[command_output_queue],
         controller=controller,
         local_logger=main_logger,
     )
@@ -146,8 +149,8 @@ def main() -> int:
         count=COMMAND_COUNT,
         target=command_worker.command_worker,
         work_arguments=(connection, target_coordinates, {}),
-        input_queues=[],
-        output_queues=[],
+        input_queues=[telemetry_queue],
+        output_queues=[command_output_queue],
         controller=controller,
         local_logger=main_logger,
     )
@@ -214,11 +217,12 @@ def main() -> int:
     # Main's work: read from all queues that output to main, and log any commands that we make
     start_time = time.time()
     # Continue running for 100 seconds or until the drone disconnects
+    total_queue = [heartbeat_queue, telemetry_queue, command_output_queue]
     while time.time() - start_time < 100:
-        if not queue.empty():
-            reading = heartbeat_queue.queue.get()
+        reading = total_queue.queue.get()
+        if not total_queue.queue.empty():
             main_logger.info(f"Active reading from queue: {reading}")
-        else:
+        if reading == "DISCONNECTED":
             main_logger.critical("Stopping. Drone disconnected.")
             break
 
@@ -228,7 +232,9 @@ def main() -> int:
     main_logger.info("Requested exit")
 
     # Fill and drain queues from END TO START
-    MAX_QUEUE.fill_and_drain_queue()
+    heartbeat_queue.fill_and_drain_queue()
+    telemetry_queue.fill_and_drain_queue()
+    command_output_queue.fill_and_drain_queue()
 
     main_logger.info("Queues cleared")
 

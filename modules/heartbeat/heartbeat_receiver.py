@@ -3,6 +3,7 @@ Heartbeat receiving logic.
 """
 
 from pymavlink import mavutil
+import time
 
 from ..common.modules.logger import logger
 
@@ -44,32 +45,34 @@ class HeartbeatReceiver:
         # Do any intializiation here
         self.connection = connection
         self.local_logger = local_logger
-        self.missed_heartbeats = 0
+        self.missed_count = 0
         self.state = "DISCONNECTED"
 
     def run(
         self,
-    ) -> str:
+    ) -> None:
         """
         Attempt to recieve a heartbeat message.
         If disconnected for over a threshold number of periods,
         the connection is considered disconnected.
         """
-        signal = self.connection.recv_match(type="HEARTBEAT", blocking=True, timeout=0.5)
-
-        if signal and signal.get_type() == "HEARTBEAT":
-            self.missed_heartbeats = 0
-            self.local_logger.info("CONNECTED. Heartbeat Received.", True)
-            self.state = "CONNECTED"
-        else:
-            self.missed_heartbeats += 1  # If variable hits 5, receiver is no longer connected
-            self.local_logger.warning("Missed Heartbeat!", True)
-            if self.missed_heartbeats >= 5:
-                self.state = "DISCONNECTED"
-                self.local_logger.error("DISCONNECTED due to 5 or more missed heartbeats!", True)
-            if self.missed_heartbeats < 5:
-                self.local_logger.error("CONNECTED. Heartbeat missed.", True)
-        return self.state
+        try:
+            signal = self.connection.recv_match(type="HEARTBEAT", blocking=False)
+            if signal is not None:
+                self.missed_count = 0
+                if self.state != "CONNECTED":
+                    self.state = "CONNECTED"
+                    self.local_logger.info("Heartbeat Received!", True)
+                self.local_logger.info("Heartbeat received", True)
+            else:
+                self.missed_count += 1
+                if self.state != "DISCONNECTED" and self.missed_count >= 5:
+                    self.state = "DISCONNECTED"
+                    self.local_logger.info("Disconnected!", True)
+            time.sleep(0.2)
+            return self.state
+        except Exception as exception:
+            self.local_logger.error(f"Heartbeat Receiver Error: {exception}", True)
 
 
 # =================================================================================================

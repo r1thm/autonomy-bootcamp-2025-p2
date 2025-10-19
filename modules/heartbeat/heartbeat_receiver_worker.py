@@ -4,6 +4,7 @@ Heartbeat worker that sends heartbeats periodically.
 
 import os
 import pathlib
+import time
 
 from pymavlink import mavutil
 
@@ -64,6 +65,7 @@ def heartbeat_receiver_worker(
         controller.check_pause()
         receiver.run()
         report_queue.queue.put(receiver.run())
+        time.sleep(1)
 
 
 # =================================================================================================

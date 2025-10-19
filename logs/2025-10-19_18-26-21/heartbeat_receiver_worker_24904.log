@@ -1,0 +1,16 @@
+18:26:22: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 48] Logger initialized
+18:26:22: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver_worker.py | heartbeat_receiver_worker | 59] Heartbeat Receiver Created
+18:26:22: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat connected
+18:26:22: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received
+18:26:23: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received
+18:26:25: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received
+18:26:25: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received
+18:26:26: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received
+18:26:29: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 71] Heartbeat disconnected
+18:26:35: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 65] Heartbeat connected
+18:26:35: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received
+18:26:36: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received
+18:26:37: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received
+18:26:39: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received
+18:26:39: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received
+18:26:41: [INFO] [C:\Users\Hanxi\wargbootcamp\autonomy-bootcamp-2025-p2\modules\heartbeat\heartbeat_receiver.py | run | 66] Heartbeat received

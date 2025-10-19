@@ -50,8 +50,8 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    controller: worker_controller.WorkerController,
-    active_queue: queue_proxy_wrapper.QueueProxyWrapper,  # Add any necessary arguments
+    active_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,  # Add any necessary arguments
 ) -> None:
     """
     Stop the workers.
@@ -71,12 +71,12 @@ def read_queue(
     while not controller.is_exit_requested():
         if not active_queue.queue.empty():
             if active_queue.queue.get() == "DISCONNECTED":
-                main_logger.warning("State: Disconnected")
+                main_logger.warning(f"State: {active_queue.queue.get()}")
             else:
-                main_logger.info("State: Connected")
-                time.sleep(
-                    0.1
-                )  # Add logic to read from your worker's output queue and print it using the logger
+                main_logger.info(f"State: {active_queue.queue.get()}")
+        time.sleep(
+            1
+        )  # Add logic to read from your worker's output queue and print it using the logger
 
 
 # =================================================================================================

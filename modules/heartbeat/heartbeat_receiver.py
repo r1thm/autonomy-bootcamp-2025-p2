@@ -2,8 +2,8 @@
 Heartbeat receiving logic.
 """
 
-from pymavlink import mavutil
 import time
+from pymavlink import mavutil
 
 from ..common.modules.logger import logger
 
@@ -71,7 +71,7 @@ class HeartbeatReceiver:
                     self.local_logger.info("Disconnected!", True)
             time.sleep(0.2)
             return self.state
-        except Exception as exception:
+        except (OSError, mavutil.mavlink.MAVError) as exception:
             self.local_logger.error(f"Heartbeat Receiver Error: {exception}", True)
 
 

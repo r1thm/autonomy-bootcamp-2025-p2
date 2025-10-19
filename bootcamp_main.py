@@ -5,7 +5,6 @@ Main process to setup and manage all the other working processes
 """
 
 import multiprocessing as mp
-import queue
 import time
 
 from pymavlink import mavutil

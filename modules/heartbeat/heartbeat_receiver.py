@@ -70,7 +70,6 @@ class HeartbeatReceiver:
                     self.state = "DISCONNECTED"
                     self.local_logger.info("Disconnected!", True)
             time.sleep(0.2)
-            return self.state
         except (OSError, mavutil.mavlink.MAVError) as exception:
             self.local_logger.error(f"Heartbeat Receiver Error: {exception}", True)
 

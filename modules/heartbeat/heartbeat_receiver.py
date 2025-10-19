@@ -64,7 +64,8 @@ class HeartbeatReceiver:
             self.local_logger.warning("Missed Heartbeat!", True)
             if self.missed_heartbeats >= 5:
                 self.local_logger.error("DISCONNECTED due to 5 or more missed heartbeats!", True)
-                return "DISCONNECTED"
+                disconnected = "DISCONNECTED"  # Used to fix linters
+                return disconnected
             if self.missed_heartbeats < 5:
                 self.local_logger.error("CONNECTED. Heartbeat missed.", True)
 

@@ -45,6 +45,7 @@ class HeartbeatReceiver:
         self.connection = connection
         self.local_logger = local_logger
         self.missed_heartbeats = 0
+        self.state = "DISCONNECTED"
 
     def run(
         self,
@@ -57,17 +58,18 @@ class HeartbeatReceiver:
         signal = self.connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1.2)
 
         if signal and signal.get_type() == "HEARTBEAT":
-            self.missed_heartbeats = 0  # Failsafe to ensure consecutiveness
+            self.missed_heartbeats = 0 
             self.local_logger.info("CONNECTED. Heartbeat Received.", True)
+            self.state = "CONNECTED"
         else:
             self.missed_heartbeats += 1  # If variable hits 5, receiver is no longer connected
             self.local_logger.warning("Missed Heartbeat!", True)
             if self.missed_heartbeats >= 5:
+                self.state = "DISCONNECTED"
                 self.local_logger.error("DISCONNECTED due to 5 or more missed heartbeats!", True)
-                disconnected = "DISCONNECTED"  # Used to fix linters
-                return disconnected
             if self.missed_heartbeats < 5:
                 self.local_logger.error("CONNECTED. Heartbeat missed.", True)
+        return self.state
 
 
 # =================================================================================================

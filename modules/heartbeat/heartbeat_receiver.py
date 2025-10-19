@@ -58,7 +58,7 @@ class HeartbeatReceiver:
         signal = self.connection.recv_match(type="HEARTBEAT", blocking=True, timeout=1.2)
 
         if signal and signal.get_type() == "HEARTBEAT":
-            self.missed_heartbeats = 0 
+            self.missed_heartbeats = 0
             self.local_logger.info("CONNECTED. Heartbeat Received.", True)
             self.state = "CONNECTED"
         else:
